@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buddy Connect – No One Feels Far From Home</title>
+<meta name="description" content="Buddy Connect pairs international students in India with Indian student buddies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo"><span class="logo-mark">B</span>Buddy Connect</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="menu" class="menu">
+      <a href="#home">Home</a>
+      <a href="#buddies">Find a Buddy</a>
+      <a href="#activities">Activities</a>
+      <a href="#help">Help Centre</a>
+      <a href="#about">About Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ A. HOME ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="pill">International Student Buddy Programme</p>
+      <h1>A New Place. New Friends. A Place to Belong.</h1>
+      <p class="lead">Moving to India for your studies is exciting, and sometimes lonely. Buddy Connect pairs you with an Indian student who helps you find your way around campus, food, language and friendships.</p>
+      <div class="cta-row">
+        <a href="#buddies" class="btn btn-primary">Find Your Buddy</a>
+        <a href="#join" class="btn btn-ghost">Join Our Community</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="av av1">A</div><div class="av av2">M</div><div class="av av3">P</div><div class="av av4">S</div>
+      <div class="bubble b1">Namaste 🙏</div>
+      <div class="bubble b2">Hola 👋</div>
+      <div class="bubble b3">안녕하세요</div>
+      <div class="bubble b4">Bonjour ☕</div>
+      <div class="bubble b5">مرحبا</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div><b data-count="">0</b><span>Demo students registered</span></div>
+      <div><b data-count="">0</b><span>Demo countries represented</span></div>
+      <div><b data-count="">0</b><span>Demo buddy pairs</span></div>
+      <div><b data-count="" data-suffix="%">0</b><span>Demo “feel at home” score</span></div>
+    </div>
+    <p class="note">Statistics are sample figures for this prototype only.</p>
+  </div>
+</section>
+
+<!-- ============ B. ABOUT ============ -->
+<section class="sec alt" id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About Buddy Connect</h2>
+      <p>Many international students in India tell us the same things: they miss home, find it hard to talk with classmates, and don't know where to start with the food, customs and city.</p>
+      <p>Buddy Connect matches each new student with an Indian buddy who shares a language or an interest. Buddies show you around campus, explain local ways, and become the first friend you can message when something feels unfamiliar.</p>
+      <p>We designed this prototype for a Design Thinking project, from interviews with students who have lived this experience.</p>
+    </div>
+    <div class="about-cards">
+      <article class="card"><span class="ico">🤝</span><h3>Matched by what you share</h3><p>Languages and interests bring people together faster than nationality.</p></article>
+      <article class="card"><span class="ico">🧭</span><h3>Guidance from someone local</h3><p>Ask the small questions: which bus, which canteen, which festival.</p></article>
+      <article class="card"><span class="ico">🌍</span><h3>Friendship goes both ways</h3><p>Buddies learn about your country, language and food too.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ D. FIND YOUR BUDDY ============ -->
+<section class="sec" id="buddies">
+  <div class="wrap">
+    <h2>Find Your Buddy</h2>
+    <p class="sub">Search by name, or filter by country, language and interest. <strong>All profiles are fictional demo profiles.</strong></p>
+    <div class="filters">
+      <input type="search" id="q" placeholder="Search name, country or interest" aria-label="Search buddies">
+      <select id="fCountry" aria-label="Filter by country"><option value="">All countries</option></select>
+      <select id="fLang" aria-label="Filter by language"><option value="">All languages</option></select>
+      <select id="fInt" aria-label="Filter by interest"><option value="">All interests</option></select>
+      <button class="btn btn-ghost sm" id="reset">Clear filters</button>
+    </div>
+    <p id="count" class="count" aria-live="polite"></p>
+    <div class="grid" id="cards"></div>
+    <div class="empty" id="empty" hidden>No buddies match these filters. Try clearing a filter or searching a different word.</div>
+  </div>
+</section>
+
+<!-- ============ C. REGISTRATION ============ -->
+<section class="sec alt" id="join">
+  <div class="wrap two">
+    <div>
+      <h2>Join Our Community</h2>
+      <p class="sub">Tell us a little about yourself. Your demo registration is saved only in this browser and added to the buddy list.</p>
+      <ul class="ticks">
+        <li>Register as an international student or an Indian buddy</li>
+        <li>Share languages and interests to get better matches</li>
+        <li>No real account is created. This is a prototype.</li>
+      </ul>
+      <p class="saved" id="regSaved"></p>
+    </div>
+    <form id="regForm" class="form" novalidate>
+      <div class="row">
+        <label>Full name<input name="name" type="text" autocomplete="name"><small class="err"></small></label>
+        <label>Email address<input name="email" type="email" autocomplete="email"><small class="err"></small></label>
+      </div>
+      <div class="row">
+        <label>Country<input name="country" type="text" placeholder="e.g. Nepal"><small class="err"></small></label>
+        <label>University<input name="university" type="text"><small class="err"></small></label>
+      </div>
+      <label>Student type
+        <select name="type"><option value="">Select one</option><option>International Student</option><option>Indian Buddy</option></select><small class="err"></small></label>
+      <div class="row">
+        <label>Languages spoken<input name="languages" type="text" placeholder="e.g. English, Hindi"><small class="err"></small></label>
+        <label>Interests<input name="interests" type="text" placeholder="e.g. Cricket, Music"><small class="err"></small></label>
+      </div>
+      <label>Short introduction<textarea name="intro" rows="3" maxlength="240"></textarea><small class="err"></small></label>
+      <button class="btn btn-primary" type="submit">Create my profile</button>
+      <p class="ok" id="regOk" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ G. ACTIVITIES ============ -->
+<section class="sec" id="activities">
+  <div class="wrap">
+    <h2>Cultural Activities</h2>
+    <p class="sub">Meet people in person. Dates are examples for this demo.</p>
+    <div class="grid g3" id="acts"></div>
+  </div>
+</section>
+
+<!-- ============ H. HELP CENTRE ============ -->
+<section class="sec alt" id="help">
+  <div class="wrap">
+    <h2>Campus Help Centre</h2>
+    <p class="sub">Select a card to read quick guidance.</p>
+    <div class="grid g3" id="helpCards"></div>
+  </div>
+</section>
+
+<!-- ============ I. FEEDBACK ============ -->
+<section class="sec" id="feedback">
+  <div class="wrap two">
+    <div>
+      <h2>Share Your Feedback</h2>
+      <p class="sub">Tell us what works and what doesn't. Your feedback helps us improve the programme.</p>
+      <p class="saved" id="fbSaved"></p>
+    </div>
+    <form id="fbForm" class="form" novalidate>
+      <div class="row">
+        <label>Name<input name="name" type="text"><small class="err"></small></label>
+        <label>Student type
+          <select name="type"><option value="">Select one</option><option>International Student</option><option>Indian Buddy</option></select><small class="err"></small></label>
+      </div>
+      <fieldset class="stars"><legend>Rating</legend>
+        <input type="radio" name="rating" id="s5" value="5"><label for="s5" title="5 stars">★</label>
+        <input type="radio" name="rating" id="s4" value="4"><label for="s4" title="4 stars">★</label>
+        <input type="radio" name="rating" id="s3" value="3"><label for="s3" title="3 stars">★</label>
+        <input type="radio" name="rating" id="s2" value="2"><label for="s2" title="2 stars">★</label>
+        <input type="radio" name="rating" id="s1" value="1"><label for="s1" title="1 star">★</label>
+        <small class="err"></small>
+      </fieldset>
+      <label>Feedback message<textarea name="message" rows="4"></textarea><small class="err"></small></label>
+      <button class="btn btn-primary" type="submit">Send feedback</button>
+      <p class="ok" id="fbOk" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ J. FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a href="#home" class="logo light"><span class="logo-mark">B</span>Buddy Connect</a>
+      <p>No one feels far from home. A student buddy programme prototype for international students in India.</p>
+      <div class="social">
+        <a href="#" data-demo="LinkedIn" aria-label="LinkedIn">in</a>
+        <a href="#" data-demo="Instagram" aria-label="Instagram">ig</a>
+        <a href="#" data-demo="X" aria-label="X">x</a>
+        <a href="#" data-demo="YouTube" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+    <div><h4>Quick links</h4><a href="#home">Home</a><a href="#buddies">Find a Buddy</a><a href="#activities">Activities</a><a href="#about">About Us</a></div>
+    <div><h4>Support</h4><a href="#help">Help Centre</a><a href="#feedback">Feedback</a><a href="#join">Register</a><a href="#" data-demo="Privacy policy">Privacy policy</a></div>
+    <div><h4>Contact</h4><p>hello@buddyconnect.example</p><p>+91 00000 00000 (demo)</p><p>Demo University, India</p></div>
+  </div>
+  <p class="copy">© 2026 Buddy Connect. A Design Thinking student project. All profiles and data are fictional.</p>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Back to top" hidden>↑</button>
+
+<!-- ============ MODAL (profile + help details) ============ -->
+<div class="overlay" id="modal" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<!-- ============ F. CHAT PANEL ============ -->
+<div class="overlay" id="chatWrap" hidden>
+  <div class="dialog chat" role="dialog" aria-modal="true" aria-labelledby="cName">
+    <div class="chat-head">
+      <div class="av sm" id="cAv"></div>
+      <div><strong id="cName"></strong><small>Simulated demo chat</small></div>
+      <button class="x" data-close aria-label="Close chat">×</button>
+    </div>
+    <p class="chat-note">This is a simulated demo chat. Replies are scripted by JavaScript, and nothing is sent to a real person.</p>
+    <div class="msgs" id="msgs" aria-live="polite"></div>
+    <form class="send" id="chatForm">
+      <input id="chatIn" type="text" placeholder="Write a message" autocomplete="off" aria-label="Message">
+      <button class="btn btn-primary sm" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
